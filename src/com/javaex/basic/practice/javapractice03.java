@@ -301,6 +301,66 @@
 //5 입력시 1*2*3*4*5 의 값이 출력됩니다.
 //7 입력시 1*2*3*4*5*6*7 의 값이 출력됩니다.
 //팩토리얼 공식 𝐧! = 𝟏 × 𝟐 × 𝟑 × ⋯ × �
+//package com.javapractice;
+//
+//import java.util.Scanner;
+//
+//public class Java3_12 {
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		Scanner scanner = new Scanner(System.in);
+//		
+//		System.out.println("숫자를 입력하세요");
+//		int num = scanner.nextInt();
+//		
+//		int fac =1;
+//		for (int i =num; i>0; i--) {
+//			fac = fac*i;}
+//		{System.out.println( "결과값:" +fac);
+//		}
+//
+//		
+//		scanner.close();
+//	}
+//}
+//[
+//Ex 13 .
+//아래와 설명에 맞는 프로그램을 작성하세요
+//숫자를 11개 입력 받아 입력한 숫자까지 누적합계를 구하는 프로그램을 작성하세요
+//예를 들어 100100을 입력 받는다면 아래와 같이 계산됩니다
+//𝟏 +𝟐+ 𝟑+ ... +𝟏𝟎𝟎
+//package com.javapractice;
+//
+//import java.util.Scanner;
+//
+//public class Java3_13 {
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//
+//		Scanner scanner = new Scanner(System.in);
+//		
+//		System.out.print("숫자를 입력하세요.:");
+//		int n = scanner.nextInt();
+//		
+//		int sum = 0;
+//		
+//		for(int i = 1; i<=n; i++)
+//			sum += i;
+//		System.out.println("합계:"+ sum);
+//		
+//		scanner.close();
+//		
+//
+//
+//	}
+//
+//}
+//[
+//Ex 14 .
+//13번 문제에 아래와 같이 계산식이 표시되도록 프로그램을 작성하세요
+
 
 
 
