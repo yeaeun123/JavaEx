@@ -359,9 +359,74 @@
 //}
 //[
 //Ex 14 .
-//13번 문제에 아래와 같이 계산식이 표시되도록 프로그램을 작성하세요
-
-
+//13번 문제에 아래와 같이 계산식이 표시되도록 프로그램을 작성하세요 
+// 1+2+...를 어떻게 출력하는지 모르겠어요.
+//package com.javapractice;
+//
+//import java.util.Scanner;
+//
+//public class Java3_14 {
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//	
+//		
+//		Scanner scanner = new Scanner(System.in);
+//		
+//		System.out.print("숫자를 입력하세요.:");
+//		int n = scanner.nextInt();
+//		
+//		int sum = 0;
+//		
+//		for(int i = 1; i<=n; i++)
+//			sum += i;
+//		System.out.println("합계:"+ sum);
+//		
+//		scanner.close();
+//		
+//
+//	}
+//
+//}
+//[
+//Ex 15 .
+////아래와 설명에 맞는 프로그램을 작성하세요
+////숫자를 11개 입력 받아 입력한 수의 약수를 모두 출력하세요
+////예를 들어 1010을 입력한 경우 1, 2, 5, 10 이 출력된다
+//package com.javapractice;
+//
+//import java.util.Scanner;
+//
+//public class Java3_15 {
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		Scanner scanner = new Scanner(System.in);
+//		
+//		System.out.print("숫자를 입력하세요.:");
+//		int num = scanner.nextInt();
+//	
+//		for(int i =1; i <=num; i++) {
+//			if(num % i == 0) {
+//			
+//				System.out.println(i+" ");
+//			}
+//		
+//	
+//		}
+//		scanner.close();
+//	}
+//
+//}
+//[
+//Ex 16 .
+//아래와 설명에 맞는 프로그램을 작성하세요
+//숫자를 11개 입력 받아 55의 배수의 개수와 합을 출력하는 프로그램을 작성하세요
+//예를 들어 2222을 입력한 경우 55의배수 개수 4, 5 5의배수 합 50 이 출력된다
+//-
+//55의배수 개수 : 5, 10, 15, 20  44개
+//-
+//55의배수 합 : 5+10+15+20  50
 
 
 
