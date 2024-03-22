@@ -20,7 +20,7 @@ public class MethodEx {
 		System.out.println(sum);
 		
 	}
-	
+	//매개변수 o, 리턴 o
 	private static double getSum(double num1, double num2) {
 		System.out.println("매개변수 있고, 리턴도 있는 메서드");
 		return num1 + num2;
@@ -30,6 +30,7 @@ public class MethodEx {
 		System.out.println("매개변수 있고, 리턴도 있는 메서드");
 		return num1 +num2 + num3;
 	}
+	// 매개변수 o, 리턴 x
 	private static void printDevide(int num1, int num2) {
 		//리턴 타입이 없어도 리턴할 수 있다.
 		// 남은 코드를 더이상 수행하지 않고 제어를 돌려줄 때
@@ -41,10 +42,12 @@ public class MethodEx {
 		System.out.printf("%d / %d = %d%n",  
 				num1, num2, num1/num2);
 	}
+	// 매개변수 x, 리턴 o
 	private static String getMessage() {
 		return "매개변수 없지만 리턴은 있는 메서드";
 	}
 	
+	//매개변수 x,리턴 x
 	private static void printMessage() {
 		// 매개변수 X
 		// 리턴 X -> void
