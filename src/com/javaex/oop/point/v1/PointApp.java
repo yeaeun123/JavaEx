@@ -6,14 +6,15 @@ public class PointApp {
 		// TODO Auto-generated method stub
 
 		Point one =new Point();
-		one.setX();
+		one.setX(5);
+		one.setY(5);
 		
 		Point two = new Point();
-		two.setY();
+		two.setX(10);
+		two.setY(23);
 		
-		System.out.printf("점"+"["+"x"+"="+one.getX()
-				+","+"y"+"="+two.getY()+"]"+"을 그렸습니다.");
-	
+		one.draw();
+		two.draw();
 	}
 
 }
