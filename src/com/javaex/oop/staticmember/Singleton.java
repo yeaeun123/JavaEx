@@ -11,7 +11,7 @@ public class Singleton {
 		//new 생성 불가		
 	}
 	
-	public Singleton getInstance() {
+	public static Singleton getInstance() {
 		//유일한 인스턴스 반환
 		return instance;
 		
