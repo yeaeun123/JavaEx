@@ -24,6 +24,15 @@ public class PointApp {
 		one.draw(true);	//그리기
 		one.draw(false);//지우기
 		
+		ColorPoint cp = new ColorPoint("red");
+		cp.draw();
+		ColorPoint cp2 = new ColorPoint(10, 10, "blue");
+		cp2.draw();
+		
+		cp.draw(true);
+		cp.draw(false);
+		
+		
 		two.draw(true);
 		two.draw(false);
 	}
