@@ -7,7 +7,7 @@ public class CondOperEx {
 		
 		//  a가 짝수면 짝수, 홀수면 홀수 출력
 		String result = a % 2 == 0 ? "짝수":"홀수";
-		System.out.println(a + "는 " + result + "입니다");
+		System.out.println(a + "은 " + result + "입니다");
 		
 		
 		int score = 70;
