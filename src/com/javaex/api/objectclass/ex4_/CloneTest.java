@@ -1,6 +1,6 @@
 package com.javaex.api.objectclass.ex4_;
 
-//얕은 복제
+
 public class CloneTest {
 
 	public static void main(String[] args) {
