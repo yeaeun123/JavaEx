@@ -71,7 +71,7 @@ public class SortEx {
    private static void customClassSort() {
       //   사용자 정의 클래스의 정렬
       Member[] members = {
-            new Member("홀길동"),
+            new Member("홍길동"),
             new Member("고길동"),
             new Member("장길산"),
             new Member("임꺽정"),

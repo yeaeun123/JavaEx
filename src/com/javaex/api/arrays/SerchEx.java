@@ -15,10 +15,10 @@ public class SerchEx {
 	}
 	
 	private static void basicSearch() {
-		// Java Arrays 의 검색 기능은 binarySearch 방식으로 구현되어 있다.
+		// Java Arrays 의 검색 기능은 binarySearch (이진 검색) 방식으로 구현되어 있다.
 		int[] nums = {6, 4, 3, 5, 7, 9, 8, 2, 1, 10};
 		
-		// 이진 검색 방식의 배열은 정렬이 되어 있어야 한다.
+		// 이진 검색 방식의 배열은 정렬이 (sorting) 되어 있어야 한다.
 		Arrays.sort(nums);
 		System.out.println("정렬된 배열 : "+ Arrays.toString(nums));
 		

@@ -7,7 +7,7 @@ public class StringEx {
 	public static void main(String[] args) {
 
 		// 문자열 기본
-//		stringBasic();
+		stringBasic();
 
 		// 문자열의 다양한 메서드
 		usefullMethods();
