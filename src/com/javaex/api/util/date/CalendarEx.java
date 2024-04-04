@@ -6,6 +6,7 @@ public class CalendarEx {
 
 	public static void main(String[] args) {
 		// 캘린더 불러오기 : .getInstance()를 통해 인스턴스 확보 가능
+		//new객체 생성 안됨!!
 		Calendar now = Calendar.getInstance(); // 현재 날짜와 시간
 		Calendar custom = Calendar.getInstance();
 
@@ -15,11 +16,15 @@ public class CalendarEx {
 		// 상수를 이용한 날짜 정보 얻어오기
 		/// 년, 월, 일
 		int nowYear = now.get(Calendar.YEAR);
-		int nowMonth = now.get(Calendar.MONTH) + 1; // 1월은 0부터 시작임 +1필수
+		
+		int nowMonth = now.get(Calendar.MONTH) + 1; 
+		// 1월은 0부터 시작임 +1필수
+		
 		int nowDate = now.get(Calendar.DATE);
 
 		// 출력
-		System.out.printf("오늘은 %d년 %d월 %d일 입니다.%n", nowYear, nowMonth, nowDate);
+		System.out.printf("오늘은 %d년 %d월 %d일 입니다.%n",
+				nowYear, nowMonth, nowDate);
 
 		Calendar future = Calendar.getInstance(); // 현재 시간
 

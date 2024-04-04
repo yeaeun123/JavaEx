@@ -17,18 +17,26 @@ public class DateEx {
 
 		// 기본 출력
 		// DateFormat 클래스로 기본적인 출력 형식을 맞출 수 있음
-		DateFormat df = DateFormat.getDateInstance(DateFormat.FULL); // FULL :2024년 4월 3일 수요일
+		DateFormat df = DateFormat.getDateInstance(DateFormat.FULL);
+		// FULL :2024년 4월 3일 수요일
 		System.out.println("FULL FORMAT: " + df.format(now));
-		df = DateFormat.getDateInstance(DateFormat.LONG); // LONG : 2024년 4월 3일
+		
+		df = DateFormat.getDateInstance(DateFormat.LONG); 
+		// LONG : 2024년 4월 3일
 		System.out.println("LONG: " + df.format(now));
-		df = DateFormat.getDateInstance(DateFormat.MEDIUM); // MEDIUM: 2024. 4. 3.
+		
+		df = DateFormat.getDateInstance(DateFormat.MEDIUM); 
+		// MEDIUM: 2024. 4. 3.
 		System.out.println("MEDIUM: " + df.format(now));
-		df = DateFormat.getDateInstance(DateFormat.SHORT); // SHORT: 24. 4. 3.
+		
+		df = DateFormat.getDateInstance(DateFormat.SHORT); 
+		// SHORT: 24. 4. 3.
 		System.out.println("SHORT: " + df.format(now));
 
 		// Date Format과 Time Format을 이용해서 날짜와 시간을 표기
 		// SimpleDateFormat
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 "
+				+ "dd일 HH시 mm분 ss초");
 		System.out.println("날짜 포맷: " + sdf.format(now));
 
 	}
