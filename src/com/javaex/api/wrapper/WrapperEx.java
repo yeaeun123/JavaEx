@@ -10,7 +10,7 @@ public class WrapperEx {
 		Integer i = new Integer(10); //deprecated 무시하면 안됨 
 		Character c = new Character('c');	
 		// deprecated 되었으므로 더이상 사용하지 말자!!
-		// .valueOf static 메서드로 생성
+		// .valueOf static 메서드로 생성ww
 		Float f = Float.valueOf(3.14159f);
 		Boolean b = Boolean.valueOf(true);
 		// 기본 타입에 대응한 WrapperClass가 있다.
@@ -45,10 +45,7 @@ public class WrapperEx {
 		// 언박싱 비교( 내부 데이터의 비교)
 		System.out.println(i4.intValue() == i5.intValue()); //값의 비교 (int)
 		System.out.println(i4.equals(i5)); 
-		
-		
-		
-		
+	
 	}
 
 }

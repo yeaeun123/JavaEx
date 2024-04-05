@@ -50,9 +50,6 @@ public class BoxApp {
 		String objStr = genericStrBox.getContent();
 		// 내부 저장 데이터가 지정되어 있기 때문에 캐스팅 불필요
 		System.out.println(objStr);
-		
-		
-		
 
 	}
 
