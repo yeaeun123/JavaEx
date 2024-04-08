@@ -15,23 +15,18 @@ class Student {
 		this.name = name;
 	}
 	// getters/setters
-
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	// toString
 	@Override
 	public String toString() {
@@ -44,7 +39,6 @@ class Student {
 	@Override
 	public int hashCode() {
 		// 해시 함수의 로직: 학번을 기준으로
-
 		return id;
 	}
 
@@ -59,6 +53,9 @@ class Student {
 	}
 
 }
+// 해시함수 -> 데이터같음=같은값 / 데이터다름=다른값
+//hashset=집합 /순서 중요X/ 중복 X 
+//hash -저장 & 빠른검색
 
 public class HashSetEx {
 
@@ -67,10 +64,10 @@ public class HashSetEx {
 //		usingHashSet();
 
 		// 2. 집합 연산
-//		setOperation();
+		setOperation();
 
 		// 3. HashSet사용법 (객체 자료형)
-		usingHashSetWithCustom();
+//		usingHashSetWithCustom();
 	}
 
 	private static void usingHashSet() {
@@ -147,8 +144,10 @@ public class HashSetEx {
 		System.out.println(setA.equals(evens));
 
 	}
-
+//hash 두 객체가 동등한지 확인-> hashcode 메서드는 객체의 메모리번지이용/모두 다른 값
+	//		->1. hashcode override 2.equals override 두개다 통과해야 동등객체 가능
 	private static void usingHashSetWithCustom() {
+		
 		HashSet<Student> hs = new HashSet<>();
 
 		Student s1 = new Student(10, "홍길동");
