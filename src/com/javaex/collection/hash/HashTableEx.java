@@ -30,7 +30,7 @@ class ClassRoom {
 	// 동등성 체크 로직**********
 	// 1. subject 의 hashCode를 전체 객체의 hashCode로 삼는다.
 	// 2. subject 의 값이 동일하면 전체 객체의 값도 같다고 판정 짓는다.
-	// 두 개의 관문을 모두 통과해야 동등성을 확인
+	// 두 개의 관문을 모두 통과해야 동등성을 확인 hashCode & equals
 	@Override
 	public int hashCode() {
 		return subject.hashCode();
@@ -56,7 +56,7 @@ public class HashTableEx {
 		// Key(KeySet)은 순서가 없고, 중복 허용 안함
 		// Value는 Key를 통한 접근만 가능, 중복 허용
 
-		// Hashtable 선언
+		// Hashtable 선언 /generic
 		Map<String, ClassRoom> map = new Hashtable<>();
 
 		// map에 데이터 넣기 (put) (keyset 순서없이 출력됨,중복허용x)
@@ -76,12 +76,12 @@ public class HashTableEx {
 		// 202변경/새로 만들어진 객체에 넣기
 		System.out.println(map.get("202"));
 
-		// 특정 키를 포함하고 있는지 확인해보기( key)
+		// 특정 키를 포함하고 있는지 확인해보기( containsKey)
 		System.out.println(map.containsKey("202"));
 		// key가 keyset에 포함되어 있는지 확인
 		System.out.println(map.containsKey("505")); // 값과 관계없음 (key정보)
 
-		// 특정 값을 포함하고 있는지 확인해보기(value)
+		// 특정 값을 포함하고 있는지 확인해보기(containsValue)
 		// 값에 Java가 포함된 값이 있는지 확인해보기
 		System.out.println(map.containsValue("Java")); // false //두객체 동등성비교필요
 		System.out.println(map.containsValue(new ClassRoom("Java")));
