@@ -100,5 +100,4 @@ public class HashTableEx {
 		map.clear();
 		System.out.println(map);
 	}
-
 }

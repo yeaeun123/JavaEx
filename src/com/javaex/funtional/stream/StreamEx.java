@@ -53,7 +53,7 @@ class Student { //2번을 위한 클래스
 
 }
 
-public class StreamEx {
+public class StreamEx { //스트림은 중간연산,최종연산이 있음
 
 	public static void main(String[] args) {
 		// 1.프리미티브 타입 스트림 (기본타입)
@@ -76,12 +76,12 @@ public class StreamEx {
 //		System.out.println(objStream);
 		
 		// 최종연산 : forEach
-//		testForEach(scores, students);
+		testForEach(scores, students);
 //		testFilter(scores, students); 	//filter
-//		testMap(scores);				// map
+//		testMap(scores);				// map 중요!
 //		testCountSum(scores);			//count, sum
 //		testFilterSort(students);		// filter + sorted
-		testReduce(scores);
+//		testReduce(scores);				//reduce 중요!
 		
 		
 	}
@@ -111,7 +111,7 @@ public class StreamEx {
 	}
 
 	private static void testFilter(int[] arr, List<Student> lst) {
-		// arr에서 점수가 70점 이상인 것만 추출
+		// arr에서 점수가 70점 이상인 것만 추출 //요소는 그대로->필터링(걸러낸다)
 		System.out.println("===================Stream filter");
 		System.out.println(Arrays.toString(arr));
 		
@@ -168,6 +168,7 @@ public class StreamEx {
 	}
 	
 	private static void testReduce(int[] arr) {
+		//내부 처리기능은 없음. 사용자가 직접 지정한 기능수행함.
 		System.out.println("원본 : " + Arrays.toString(arr));
 		System.out.println("==================stream reduce");
 		
