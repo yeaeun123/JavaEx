@@ -34,7 +34,7 @@ public class FileClassEx {
 			try {
 				newFile.createNewFile(); // 실제 파일 생성
 			} catch (IOException e) {
-				System.out.println("파일을 만들지 못했어요.");
+				System.err.println("파일을 만들지 못했어요.");
 			}
 
 		}
