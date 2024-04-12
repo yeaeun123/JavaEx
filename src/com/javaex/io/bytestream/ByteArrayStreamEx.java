@@ -19,27 +19,38 @@ public class ByteArrayStreamEx {
 
 		// 전통적 방식의 입출력 스트림 예외 처리
 		// AutoCloseable -> 자동 자원 해제
-
-//		  InputStream bis = null; // 입력스트림 선언 OutputStream bos = null; // 출력스트림 선언
-//		  
-//		  // try - with - resource try { // 예외처리 // 입력 스트림과 출력 스트림 열기 bis = new
-//		  ByteArrayInputStream(inSrc); // import bos = new ByteArrayOutputStream(); //
-//		  import
-//		  
-//		  int data = 0; // 입력 스트림으로부터 넘어올 데이터 저장 변수
-//		  
-//		  while ((data = bis.read()) != -1) {// -1이면 더이상 읽을 데이터 없음
-//		  System.out.println("Read data: " + data); bos.write(data); }
-//		  
-//		  outSrc = ((ByteArrayOutputStream) bos).toByteArray(); // bos캐스팅/배열로 변환
-//		  
-//		  System.out.println("최종 결과 : " + Arrays.toString(outSrc)); } catch
-//		  (IOException e) { // IOException 처리 e.printStackTrace();
-//		  
-//		  } catch (Exception e) { // 혹시 남아있을지 모를 예외 처리 e.printStackTrace(); } finally {
-//		  try { bis.close(); bos.close(); } catch (Exception e) {
-//		  
-//		  } }
+//		InputStream bis = null;
+//		OutputStream bos = null;
+//		
+//		try {
+//			//	입력 스트림과 출력 스트림 열기
+//			bis = new ByteArrayInputStream(inSrc);
+//			bos = new ByteArrayOutputStream();
+//			
+//			int data = 0;	//	입력 스트림으로부터 넘어올 데이터 저장 변수
+//			
+//			while((data = bis.read()) != -1) {	//	-1이면 더이상 읽을 데이터 없음
+//				System.out.println("Read data:" + data);
+//				bos.write(data);
+//			}
+//			
+//			outSrc = ((ByteArrayOutputStream)bos).toByteArray();
+//			
+//			System.out.println("최종 결과:" + Arrays.toString(outSrc));
+//			
+//		} catch (IOException e) {	//	IOException 처리
+//			e.printStackTrace();
+//		} catch (Exception e) {	//	혹시 남아있을지 모를 예외 처리
+//			e.printStackTrace();
+//		} finally {
+//			try {
+//				bis.close();
+//				bos.close();
+//			} catch (Exception e) {
+//				
+//			}
+//		}
+//		  }
 
 		// AutoCloseable을 활용한 예외 처리 : try - with - resources
 		try ( // 자원 해제를 필요로 하는 객체를 초기화
