@@ -1,8 +1,8 @@
 package com.javaex.collection.list;
 
 
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 
 public class ListEx2 {
@@ -15,9 +15,8 @@ public class ListEx2 {
 		// 순서가 있다.
 		// 중복 허용
 		
-		List<String> lst = new LinkedList<>();
-//		List<String> lst = new ArrayList<>(); 
-		
+//		List<String> lst = new LinkedList<>();
+		List<String> lst = new ArrayList<>(); 		
 		
 		// 객체 추가 : .add
 		lst.add("Java");

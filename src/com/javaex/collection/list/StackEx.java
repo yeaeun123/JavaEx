@@ -5,6 +5,7 @@ import java.util.Stack;
 public class StackEx {
 
 	public static void main(String[] args) {
+		//vector클래스를 상속받아 구현/쌓여있는 접시 쌓거나 가장 위 접시사용가능
 		//스택 선언
 		Stack<Integer> stack = new Stack<>();
 		
@@ -14,7 +15,7 @@ public class StackEx {
 			System.out.println("Stack: " + stack);
 		}
 		
-		// 가장 마지막에 있는 데이터 확인
+		// 가장 마지막에 있는 데이터 확인만 함(가장 위)
 		
 		System.out.println("Peek: " + stack.peek());
 		System.out.println("Stack: "+ stack);
@@ -29,7 +30,7 @@ public class StackEx {
 //
 //	}
 		
-		// Stack이 비어있는지 확인 해야한다.
+		// Stack이 비어있는지 확인 해야한다.!!
 		while(!stack.empty()) { // 비어있지 않으면 /not boolean
 			System.out.println("Pop: " + stack.pop());
 			System.out.println("Stack: "+ stack);

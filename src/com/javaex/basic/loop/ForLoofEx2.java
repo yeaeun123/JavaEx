@@ -13,7 +13,7 @@ public class ForLoofEx2 {
 		
 			System.out.println(num+"*"+ dan + "=" +(num*dan));
 	}
-		System.out.println();
+		System.out.println('\t');
 		
 	
 	}}
