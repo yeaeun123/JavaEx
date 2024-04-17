@@ -9,7 +9,7 @@ public class MainThread {
 		// thread시작
 		// -> .start() 메서드 호출
 		
-		// 쓰레드의 우선순위
+		// 쓰레드의 우선순위 Priority
 		// 1(MIN) ~ 5(NORMAL) ~ 10(MAX)
 		thread.setPriority(Thread.MAX_PRIORITY);
 		

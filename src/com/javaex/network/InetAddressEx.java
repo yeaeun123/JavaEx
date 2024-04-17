@@ -14,7 +14,7 @@ public class InetAddressEx {
 		printServerIp("www.google.com");
 	}
 	private static void printLocalIp() {
-		// local loop back :  127.0.0.1 (내 자신이 응답하게되어있음)
+		// local loop back :  127.0.0.1 (내 자신이 응답하게되어있음/로컬호스트!!)
 		// PC : IP
 		try {
 		InetAddress local = InetAddress.getLocalHost();
