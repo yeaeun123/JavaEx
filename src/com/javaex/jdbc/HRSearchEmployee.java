@@ -38,8 +38,9 @@ public class HRSearchEmployee {
 
 	            String sql = "SELECT first_name, last_name, email, phone_number, hire_date "
 	                    + "FROM employees "
-	                    + "WHERE LOWER(first_name) LIKE LOWER (?)"
-	                    + "OR LOWER(last_name) LIKE LOWER(?)";
+	                    + "WHERE LOWER(first_name) LIKE LOWER (?) "
+	                    + "OR LOWER(last_name) LIKE LOWER (?) ";
+	            System.out.println(sql);
 
 	            stmt = conn.prepareStatement(sql);
 	            stmt.setString(1, "%" + keyword + "%");

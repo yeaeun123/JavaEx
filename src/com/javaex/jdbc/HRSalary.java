@@ -42,8 +42,9 @@ Pat Fay 90000
 			conn = DriverManager.getConnection(dburl, dbuser, dbpass);
 			
 			String sql = "SELECT first_name, last_name, salary FROM employees "
-					+ "WHERE salary BETWEEN ? AND ?"
+					+ "WHERE salary BETWEEN ? AND ? "
 					+ "ORDER BY salary ASC";
+			System.out.println(sql);
 			
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, minSalary);
@@ -57,7 +58,7 @@ Pat Fay 90000
 				String lastName = rs.getString("last_name");
 				int salary = rs.getInt("salary");
 				
-				System.out.printf("%s %s %d%n", firstName, lastName, salary);
+				System.out.printf("%s %s \t%d%n", firstName, lastName, salary);
 			}
 
 		} catch (ClassNotFoundException e) {
