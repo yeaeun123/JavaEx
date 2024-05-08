@@ -54,7 +54,7 @@ public class HRSearchEmployeesPstmt {
 				String email = rs.getString(2);
 				String phoneNumber = rs.getString(3);
 				Date hireDate = rs.getDate(4);
-				System.out.printf("%s: %s %s %s%n",name,email,phoneNumber,hireDate);
+				System.out.printf("%s: %s, %s, %s%n",name,email,phoneNumber,hireDate);
 			}
 				
 		} catch (ClassNotFoundException e) {
