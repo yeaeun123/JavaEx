@@ -32,12 +32,13 @@ public class HRMain {
 	        // 이름과 성 컬럼에 대해 OR 검색 수행
 	        for (EmployeeVO employee : employees) {
 	            if (employee.getFirstName().contains(keyword) || employee.getLastName().contains(keyword)) {
-	                // 검색된 사원 정보 출력
+	                // 검색된 사원 정보 출력        	
+	           
 	                System.out.print("이름: " + employee.getFirstName() + " " + employee.getLastName());
-	                System.out.print("Email: " + employee.getEmail());
-	                System.out.print("전화번호: " + employee.getPhoneNumber());
-	                System.out.print("입사일: " + employee.getHireDate());
-	                System.out.print("월급: " + employee.getSalary());
+	                System.out.print(" Email: " + employee.getEmail());
+	                System.out.print(" 전화번호: " + employee.getPhoneNumber());
+	                System.out.print(" 입사일: " + employee.getHireDate());
+	                System.out.print(" 월급: " + employee.getSalary());
 	                System.out.println();
 	            }
 	        }

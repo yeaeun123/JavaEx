@@ -17,13 +17,13 @@ public class EmployeeVO {
 	private String hireDate;
 	private Long salary;
 	private String keyword;
+	
 	public EmployeeVO() {
 		
 	}
 
 	public EmployeeVO(String firstName, String lastName, String email, String phoneNumber, String hireDate,
 			Long salary) {
-		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;

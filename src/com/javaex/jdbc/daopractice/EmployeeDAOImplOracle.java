@@ -31,52 +31,46 @@ public  class EmployeeDAOImplOracle implements EmployeeDAO {
 	@Override
 	public List<EmployeeVO> getList() {
 		List<EmployeeVO> list = new ArrayList<>();
-		Connection conn = null;
-		Statement stmt = null;
-		ResultSet rs = null;
+
 		
 		try {
-			conn = getConnection();
-			stmt = conn.createStatement();
+			Connection conn = getConnection();
+			Statement stmt = conn.createStatement();
 			//이름 성, Email, 전화번호, 입사일,salary
 			String sql = "SELECT first_name,last_name, email, phone_number, hire_date,"
 					+ "salary FROM employees";
-			rs = stmt.executeQuery(sql);
+			ResultSet rs = stmt.executeQuery(sql);
 			
 			while(rs.next()) {
-				String firstName = rs.getString(1);
-				String lastName = rs.getString(2);
-				String email = rs.getString(3);
-				String phoneNumber = rs.getString(4);
-				String hireDate = rs.getString(5);
-				Long salary = rs.getLong(6);
-				
-				EmployeeVO vo = new EmployeeVO(firstName,lastName,email,phoneNumber,hireDate,salary);
-				list.add(vo);
+				list.add(new EmployeeVO(
+						rs.getString(1),
+						rs.getString(2),
+						rs.getString(3),
+						rs.getString(4),
+						rs.getString(5),
+						rs.getLong(6)));
 			}
+			rs.close();
+			stmt.close();
+			conn.close();
+	
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				if(rs != null) rs.close();
-				if(stmt != null) stmt.close();
-				if(conn != null) conn.close();
-			} catch(Exception e) {
-				
+		} catch(Exception e) {
+			e.printStackTrace();
 			}
-					
+		return list;	
 		}
-		return list;
-	}
+		
+	
 
 	@Override
-	public List<EmployeeVO> get(String keyword) {
+	public EmployeeVO get(String str) {
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet  rs = null;
 		EmployeeVO vo = null;
-		List<EmployeeVO> result = new ArrayList<>();
 		
 		
 		try {
@@ -86,20 +80,20 @@ public  class EmployeeDAOImplOracle implements EmployeeDAO {
 					+ "salary FROM employees WHERE LOWER(first_name) LIKE LOWER (?)"
 					+"OR LOWER(last_name) LIKE LOWER (?) ";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, "%" + keyword + "%");
-			pstmt.setString(2, "%" + keyword + "%");
+			pstmt.setString(1, str);
+			pstmt.setString(2, str);
 			
 			rs = pstmt.executeQuery();
 			
 			if (rs.next()) {
-				String firstName1 = rs.getString(1);
-				String lastName1 = rs.getString(2);
+				String firstName = rs.getString(1);
+				String lastName = rs.getString(2);
 				String email = rs.getString(3);
 				String phoneNumber = rs.getString(4);
 				String hireDate = rs.getString(5);
 				Long salary = rs.getLong(6);
-				vo = new EmployeeVO(firstName1, lastName1,email,phoneNumber,hireDate,salary);
-				result.add(vo);
+				vo = new EmployeeVO(firstName, lastName,email,phoneNumber,hireDate,salary);
+			
 			
 			}
 		} catch (SQLException e) {
@@ -113,7 +107,7 @@ public  class EmployeeDAOImplOracle implements EmployeeDAO {
 				
 			}
 		}
-		return (List<EmployeeVO>) vo;		
+		return vo;		
 	}
 	
 	
